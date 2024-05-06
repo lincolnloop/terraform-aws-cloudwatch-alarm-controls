@@ -30,7 +30,7 @@ variable "alarms" {
     }
     "Cloudwatch.3-ConsoleSigninWithoutMFA" = {
       description = "Cloudwatch.3 - Ensure a log metric filter and alarm exist for AWS Management Console sign-in without MFA "
-      pattern     = "{($.eventName=\"ConsoleLogin\") && ($.additionalEventData.MFAUsed !=\"Yes\") && && ($.userIdentity.type = \"IAMUser\") && ($.responseElements.ConsoleLogin = \"Success\")}"
+      pattern     = "{($.eventName=\"ConsoleLogin\") && ($.additionalEventData.MFAUsed !=\"Yes\") && ($.userIdentity.type = \"IAMUser\") && ($.responseElements.ConsoleLogin = \"Success\")}"
     }
     "CloudWatch.4-IAMPolicyChanges" = {
       description = "Cloudwatch.4 - Ensure a log metric filter and alarm exist for IAM policy changes"
